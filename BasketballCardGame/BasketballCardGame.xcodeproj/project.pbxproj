@@ -9,21 +9,27 @@
 /* Begin PBXBuildFile section */
 		49005BDA2632094C00EE214E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49005BD92632094C00EE214E /* AppDelegate.swift */; };
 		49005BDC2632094C00EE214E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49005BDB2632094C00EE214E /* SceneDelegate.swift */; };
-		49005BDE2632094C00EE214E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49005BDD2632094C00EE214E /* ViewController.swift */; };
 		49005BE12632094C00EE214E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49005BDF2632094C00EE214E /* Main.storyboard */; };
 		49005BE32632095000EE214E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49005BE22632095000EE214E /* Assets.xcassets */; };
 		49005BE62632095000EE214E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49005BE42632095000EE214E /* LaunchScreen.storyboard */; };
+		67E2E30626320D450056DCAF /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E2E30526320D450056DCAF /* Player.swift */; };
+		67E2E30A263211CA0056DCAF /* PlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E2E309263211CA0056DCAF /* PlayerController.swift */; };
+		67E2E314263217FA0056DCAF /* PlayerCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E2E313263217FA0056DCAF /* PlayerCollectionViewController.swift */; };
+		67E2E317263218200056DCAF /* PlayerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E2E316263218200056DCAF /* PlayerCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		49005BD62632094C00EE214E /* BasketballCardGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BasketballCardGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49005BD92632094C00EE214E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49005BDB2632094C00EE214E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		49005BDD2632094C00EE214E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		49005BE02632094C00EE214E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		49005BE22632095000EE214E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49005BE52632095000EE214E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		49005BE72632095000EE214E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		67E2E30526320D450056DCAF /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		67E2E309263211CA0056DCAF /* PlayerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerController.swift; sourceTree = "<group>"; };
+		67E2E313263217FA0056DCAF /* PlayerCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCollectionViewController.swift; sourceTree = "<group>"; };
+		67E2E316263218200056DCAF /* PlayerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,82 @@
 		49005BD82632094C00EE214E /* BasketballCardGame */ = {
 			isa = PBXGroup;
 			children = (
-				49005BD92632094C00EE214E /* AppDelegate.swift */,
-				49005BDB2632094C00EE214E /* SceneDelegate.swift */,
-				49005BDD2632094C00EE214E /* ViewController.swift */,
-				49005BDF2632094C00EE214E /* Main.storyboard */,
-				49005BE22632095000EE214E /* Assets.xcassets */,
-				49005BE42632095000EE214E /* LaunchScreen.storyboard */,
-				49005BE72632095000EE214E /* Info.plist */,
+				67E2E30426320D040056DCAF /* Model */,
+				67E2E30126320CE70056DCAF /* Controllers */,
+				67E2E2FF26320CC80056DCAF /* Views */,
+				67E2E2FB26320C0C0056DCAF /* Resources */,
 			);
 			path = BasketballCardGame;
+			sourceTree = "<group>";
+		};
+		67E2E2FB26320C0C0056DCAF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				49005BD92632094C00EE214E /* AppDelegate.swift */,
+				49005BDB2632094C00EE214E /* SceneDelegate.swift */,
+				49005BE22632095000EE214E /* Assets.xcassets */,
+				49005BE72632095000EE214E /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		67E2E2FF26320CC80056DCAF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				67E2E3112632174B0056DCAF /* Custom Cell */,
+				67E2E30026320CD00056DCAF /* Storyboards */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		67E2E30026320CD00056DCAF /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				49005BDF2632094C00EE214E /* Main.storyboard */,
+				49005BE42632095000EE214E /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		67E2E30126320CE70056DCAF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				67E2E30326320CF90056DCAF /* View Controller */,
+				67E2E30226320CED0056DCAF /* Model Controller */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		67E2E30226320CED0056DCAF /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				67E2E309263211CA0056DCAF /* PlayerController.swift */,
+			);
+			path = "Model Controller";
+			sourceTree = "<group>";
+		};
+		67E2E30326320CF90056DCAF /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				67E2E313263217FA0056DCAF /* PlayerCollectionViewController.swift */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		67E2E30426320D040056DCAF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				67E2E30526320D450056DCAF /* Player.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		67E2E3112632174B0056DCAF /* Custom Cell */ = {
+			isa = PBXGroup;
+			children = (
+				67E2E316263218200056DCAF /* PlayerCollectionViewCell.swift */,
+			);
+			path = "Custom Cell";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,9 +210,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49005BDE2632094C00EE214E /* ViewController.swift in Sources */,
+				67E2E314263217FA0056DCAF /* PlayerCollectionViewController.swift in Sources */,
 				49005BDA2632094C00EE214E /* AppDelegate.swift in Sources */,
+				67E2E30626320D450056DCAF /* Player.swift in Sources */,
+				67E2E30A263211CA0056DCAF /* PlayerController.swift in Sources */,
 				49005BDC2632094C00EE214E /* SceneDelegate.swift in Sources */,
+				67E2E317263218200056DCAF /* PlayerCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,7 +363,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = BasketballCardGame/Info.plist;
+				INFOPLIST_FILE = BasketballCardGame/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -305,7 +381,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = BasketballCardGame/Info.plist;
+				INFOPLIST_FILE = BasketballCardGame/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
